@@ -41,12 +41,12 @@ App = {
 
     $(".main-panel").hide();
     // Load account data
-   web3.eth.getAccounts().then(function (result) {
-            var account;
-            account = result[0];
-           App.account = account;
-          
-        });
+   web3.eth.getCoinbase(function(err, account) {
+      if(err === null) {
+        App.account = account;
+        $('#accountAddress').html("Your Account: " + account);
+      }
+    })
 
     App.contracts.Autopool.deployed().then(function(instance) {
          poolInstance = instance;
