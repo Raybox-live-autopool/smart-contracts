@@ -51,7 +51,7 @@ App = {
         App.account = account;
         $('#walletaddress').html("Your Account: " + account);
       }
-    })
+    });
 
     App.contracts.Autopool.deployed().then(function(instance) {
          poolInstance = instance;
