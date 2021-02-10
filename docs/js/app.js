@@ -15,7 +15,7 @@ App = {
       web3 = new Web3(web3.currentProvider);
     } else {
       // Specify default instance if no web3 instance provided
-      App.web3Provider = new Web3.providers.HttpProvider('https://kovan.infura.io/v3/49bc129c601849339b5a48e5e99a55d2');
+      App.web3Provider = new Web3.providers.HttpProvider('('http://localhost:7545');
       web3 = new Web3(App.web3Provider);
     }
     return App.initContracts();
