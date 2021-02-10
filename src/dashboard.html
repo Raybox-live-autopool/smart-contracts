@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="asset/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Light Bootstrap Dashboard by Creative Tim</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="asset/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="asset/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="asset/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="asset/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="asset/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/24b13cc4c3.js" crossorigin="anonymous"></script>
+
+    <style>
+        .pop_up{
+            
+        }
+    </style>
+</head>
+<body id="bdy">
+    <img src="https://i.gifer.com/ZKZx.gif" id="loader" style="width:60px;position: fixed;z-index:10;top:50%;left:50%;transform: translate(-50%, -50%);">
+    <div id="particles-js"></div>
+
+<div class="wrapper" style="display:none">
+    
+    <div class="sidebar" data-color="blue" data-image="asset/img/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    <img src="asset/img/logo-white.png" width="150px" alt="">
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="autopool.html">
+                        <i class="pe-7s-user"></i>
+                        <p>Autopool</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="withdraw.html">
+                        <i class="pe-7s-user"></i>
+                        <p>Withdraw bonus</p>
+                    </a>
+                </li>
+                <li id="mnk">
+                    
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Transactions</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="team.html">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Team</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="icons.html">
+                        <i class="pe-7s-science"></i>
+                        <p>Media</p>
+                    </a>
+                </li>
+               
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed" style="background:transparent">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+								<p class="hidden-lg hidden-md">Dashboard</p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                       
+                       
+                        <li>
+                            <a href="#">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+						<li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="inner">
+                            <h5><i class="fas fa-user"></i> &nbsp;&nbsp;Member</h5>
+                            <h3 id="Uname"></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="inner">
+                            <h5><i class="fab fa-galactic-republic"></i> &nbsp;&nbsp;SafePool Earning ETH</h5>
+                            <h3 id="safepool-earning"></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="inner">
+                            <h5><i class="fas fa-users"></i> &nbsp;&nbsp;Direct Team Earning</h5>
+                            <h3 id="direct-ref"></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="inner">
+                            <h5><i class="fab fa-teamspeak"></i> &nbsp;&nbsp;Downliners</h5>
+                            <h3 id="directDownline"></h3>
+                        </div>
+                    </div>
+                    
+                </div><br><br><br>
+                <div class="row" id="sufficient" style="display:none">
+                    <div class="col-md-12 text-center">
+                        <div class="pop_up bg-info" style="padding:10px; max-width:400px;margin:auto">
+                            <p>You have earned enough refferal bonus to activate box 1</p>
+                            <button class="btn btn-success">activate</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row inner2 mt-5">
+                    <div class="col-md-2">
+                        <img src="asset/img/new_message.svg" class="d-none" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h3 id="idy">  </h3>
+                        <P id="ref_link"></P>
+                        <p><a onclick="copyToClipboard2();" id="eth-addr" href="#"> </a></p>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-info"><i class="fab fa-twitter"></i></button>
+                        <button class="btn btn-info"><i class="fab fa-telegram-plane"></i></button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 dark-blue">
+                        <marquee behavior="" direction="">
+                            <div class="auto-exter text-center">
+                                <span class="autobox"><i class="fas fa-box text-warning"></i> box 1</span>
+                                 <span class="text-warning" id="dbox1"></span> &nbsp;&nbsp;
+                                 <span class="vertical"></span>&nbsp;&nbsp;
+
+                                 <span class="autobox"><i class="fas fa-box text-warning"></i> box 2</span>
+                                 <span class="text-warning" id="dbox2"></span> &nbsp;&nbsp;
+                                 <span class="vertical"></span>&nbsp;&nbsp;
+
+                                 <span class="autobox"><i class="fas fa-box text-warning"></i> box 3</span>
+                                 <span class="text-warning" id="dbox3"></span> &nbsp;&nbsp;
+                                 <span class="vertical"></span>&nbsp;&nbsp;
+
+                                 <span class="autobox"><i class="fas fa-box text-warning"></i> box 4</span>
+                                 <span class="text-warning" id="dbox4"></span> &nbsp;&nbsp;
+                                 <span class="vertical"></span>&nbsp;&nbsp;
+
+                                 <span class="autobox"><i class="fas fa-box text-warning"></i> box 5</span>
+                                 <span class="text-warning" id="dbox5"></span> &nbsp;&nbsp;
+                                 <span class="vertical"></span>&nbsp;&nbsp;
+
+                                 <span class="autobox"><i class="fas fa-box text-warning"></i> box 6</span>
+                                 <span class="text-warning" id="dbox6"></span> &nbsp;&nbsp;
+                                 <span class="vertical"></span>&nbsp;&nbsp;
+
+                                 <span class="autobox"><i class="fas fa-box text-warning"></i> box 7</span>
+                                 <span class="text-warning" id="dbox7"></span> &nbsp;&nbsp;
+                                 <span class="vertical"></span>&nbsp;&nbsp;
+                            </div>
+                            
+                        </marquee>
+                    </div>
+                </div><br><br><br>
+
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <div class="ribbon ribbon-top-left" id="ribbon_box1"><span >NOT ACTIVE</span></div>
+                                <div class="circle">
+                                    <h2>BOX 1</h2>
+                                    <P>0.13 ETH</P>
+                                </div>
+                                <div class="ribbon-content">
+                                    <div class="inner-rib">
+                                        <hr>
+                                        <p id="no_paid1">Globally 3 people pays 0.13 ETH each</p>
+                                        <hr>
+
+                                        <button onclick="App.box1(); return false;" class="btn1 btn btn-info">ENTER</button>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <div class="ribbon ribbon-top-left" id="ribbon_box2"><span>NOT ACTIVE</span></div>
+                                <div class="circle">
+                                    <h2>BOX 2</h2>
+                                    <P>0.26 ETH</P>
+                                </div>
+                                <div class="ribbon-content">
+                                    <div class="inner-rib">
+                                        <hr>
+                                        <p id="no_paid2">Globally 3 people pays 0.26 ETH each</p>
+                                        <hr>
+                                        <p class="btn2">No Referral necessary</p>
+
+                                        <button style="display:none" onclick="App.box_custom(); return false;" id ="" value="2" class="btn2 box_custom btn btn-info">ENTER</button>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <div class="ribbon ribbon-top-left" id="ribbon_box3"><span>NOT ACTIVE</span></div>
+                                <div class="circle">
+                                    <h2>BOX 3</h2>
+                                    <P>0.52 ETH</P>
+                                </div>
+                                <div class="ribbon-content">
+                                    <div class="inner-rib">
+                                        <hr>
+                                        <p id="no_paid3">Globally 3 people pays 0.52 ETH each</p>
+                                        <hr>
+                                        <p class="btn3">No Referral necessary</p>
+
+                                        <button id="" style="display:none" value="3" onclick="App.box_custom3(); return false;" class="btn3 box_custom3 btn btn-info">ENTER</button>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <div class="ribbon ribbon-top-left" id="ribbon_box4"><span>NOT ACTIVE</span></div>
+                                <div class="circle">
+                                    <h2>BOX 4</h2>
+                                    <P>1.04 ETH</P>
+                                </div>
+                                <div class="ribbon-content">
+                                    <div class="inner-rib">
+                                        <hr>
+                                        <p id="no_paid4">Globally 3 people pays 1.04 ETH each</p>
+                                        <hr>
+                                        <p class="btn4">No Referral necessary</p>
+
+                                        <button id="" style="display:none" value="4" onclick="App.box_custom4(); return false;" class="btn4 box_custom4 btn btn-info">ENTER</button>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <div class="ribbon ribbon-top-left" id="ribbon_box5"><span>NOT ACTIVE</span></div>
+                                <div class="circle">
+                                    <h2>BOX 5</h2>
+                                    <P>2.08 ETH</P>
+                                </div>
+                                <div class="ribbon-content">
+                                    <div class="inner-rib">
+                                        <hr>
+                                        <p id="no_paid5">Globally 3 people pays 2.08 ETH each</p>
+                                        <hr>
+                                        <p class="btn5">No Referral necessary</p>
+
+                                        <button id="" style="display:none" value="5" onclick="App.box_custom5(); return false;" class="btn5 box_custom5 btn btn-info">ENTER</button>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <div class="ribbon ribbon-top-left" id="ribbon_box6"><span>NOT ACTIVE</span></div>
+                                <div class="circle">
+                                    <h2>BOX 6</h2>
+                                    <P>4.16 ETH</P>
+                                </div>
+                                <div class="ribbon-content">
+                                    <div class="inner-rib">
+                                        <hr>
+                                        <p id="no_paid6">Globally 3 people pays 4.16 ETH each</p>
+                                        <hr>
+                                        <p class="btn6">No Referral necessary</p>
+
+                                        <button id="" style="display:none" value="6" onclick="App.box_custom6(); return false;" class="btn6 box_custom6 btn btn-info">ENTER</button>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <div class="ribbon ribbon-top-left" id="ribbon_box7"><span>NOT ACTIVE</span></div>
+                                <div class="circle">
+                                    <h2>BOX 7</h2>
+                                    <P>8.32 ETH</P>
+                                </div>
+                                <div class="ribbon-content">
+                                    <div class="inner-rib">
+                                        <hr>
+                                        <p id="no_paid7">Globally 3 people pays 8.32 ETH each</p>
+                                        <hr>
+                                        <p class="btn7">No Referral necessary</p>
+
+                                        <button id="" style="display:none" value="7" onclick="App.box_custom7(); return false;" class="btn7 box_custom7 btn btn-info">ENTER</button>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        
+                    </div>
+
+            </div>
+        </div><br><br><br><br><br><br>
+
+
+    </div>
+</div>
+
+
+</body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+    <!--  Notifications Plugin    -->
+    <script src="asset/js/bootstrap-notify.js"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+    
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="asset/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="asset/js/demo.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        function copyToClipboard() {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($("#ref_linke").text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        alert("Link copied!");
+}
+
+function copyToClipboard2() {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($("#ether-addr").text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        alert("Address copied!");
+}
+    </script>
+<script>
+    if(non == false){
+     window.location="register.html";
+    }
+</script>
+	
+
+</html>

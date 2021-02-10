@@ -1,0 +1,19 @@
+{
+    "name": "raybox-autopool",
+    "version": "1.0.0",
+    "description": "Dapp Autopool system",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "author": "Chinenye",
+    "license": "ISC",
+    "devDependencies": {
+        "lite-server": "^2.3.0"
+    },
+    "dependencies": {
+        "@truffle/hdwallet-provider": "^1.2.1"
+    }
+}

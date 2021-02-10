@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" style="max-width:550px">
+          <form onSubmit="return false;">
+            <div class="content mt-5">
+                <div class="form-group">
+                    <label for="usr">Name:</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">ID:</label>
+                    <input type="text" name="ethaddress" class="form-control" id="ref_id">
+                  </div>
+                  <div class="alert alert-danger error"></div>
+                  <button type="submit" id="lgmbtn" class="btn btn-primary btn-block">sign in</button>
+              </div>
+          </form>
+          <button onclick="App.box1(); return false;" class="btn btn-warning btn-block">Join Autopool</button>
+          <div style="margin:auto" class="text-center">
+            <hr>
+            <span id="walletaddress"></span>
+          </div>
+          
+    </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.min.js"></script>
+<script src="signincode.js"></script>
+
+<script>
+    
+</script>
+</body>
+</html>
