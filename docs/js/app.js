@@ -15,7 +15,7 @@ App = {
       web3 = new Web3(web3.currentProvider);
     } else {
       // Specify default instance if no web3 instance provided
-      App.web3Provider = new Web3.providers.HttpProvider('('http://localhost:7545');
+      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
       web3 = new Web3(App.web3Provider);
     }
     return App.initContracts();
@@ -41,10 +41,10 @@ App = {
 
     $(".main-panel").hide();
     // Load account data
-   web3.eth.getCoinbase(function(err, account) {
+    web3.eth.getCoinbase(function(err, account) {
       if(err === null) {
         App.account = account;
-        $('#accountAddress').html("Your Account: " + account);
+        $('#walletaddress').html("Your Account: " + account);
       }
     })
 
